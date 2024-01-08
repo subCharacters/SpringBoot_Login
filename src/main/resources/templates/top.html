@@ -78,6 +78,11 @@
 </th:block>
 <th:block th:if="${login_flag}">
 Hello
+    <h2>Logout</h2>
+
+    <form action="/logout" method="post">
+        <button type="submit" class="login-button">logout</button>
+    </form>
 </th:block>
 </body>
 </html>

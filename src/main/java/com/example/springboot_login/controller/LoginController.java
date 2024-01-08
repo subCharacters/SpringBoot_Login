@@ -33,4 +33,12 @@ public class LoginController {
         }
         return "redirect:top";
     }
+
+    @PostMapping("logout")
+    public String logout(HttpServletResponse response) throws IOException {
+        Cookie cookie = new Cookie("login_flag", null);
+        cookie.setMaxAge(0);
+        response.addCookie(cookie);
+        return "redirect:/";
+    }
 }
